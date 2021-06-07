@@ -32,9 +32,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: v${{steps.version.outputs.value}}
-        release_name: v${{steps.version.outputs.value}}
-        body: ${{steps.description.outputs.content}}
+        tag_name: ${{env.strDate}}
+        release_name: ${{env.strDate}} - 自动编译发布
+        body: 和名字一样,这就是个自动发布
+        file: ./Osiris/Osiris/Osiris/Release/Osiris.dll
         draft: false
         prerelease: false
       
