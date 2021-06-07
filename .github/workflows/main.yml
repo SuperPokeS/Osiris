@@ -34,7 +34,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ./Osiris/Osiris/Osiris/Release/Osiris.dll
+          file: ./*
           tag: 自动发布
           file_glob: true
           overwrite: true
